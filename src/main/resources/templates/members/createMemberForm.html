@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <!-- 등록 버튼을 누르면 action의 url로 post 방식으로 넘어가고
+    @PostMapping("/members/new") 메서드에 매핑됨
+    신기하게 MemberForm의 name 필드에 아래 input 박스에서 명시한 name의 key에 해당하는 value가 매핑됨
+    -->
+    <form action="/members/new" method="post">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <!-- name에 해당하는 값이 서버로 넘어올 때 key 값이 됨 -->
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>
